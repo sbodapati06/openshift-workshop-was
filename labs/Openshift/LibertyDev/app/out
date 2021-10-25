@@ -1,0 +1,140 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.pwte.example:CustomerOrderServicesWeb:war:0.1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.(groupId:artifactId)' must be unique but found duplicate declaration of plugin org.apache.maven.plugins:maven-war-plugin @ line 75, column 15
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.pwte.example:CustomerOrderServicesTest:war:0.1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.(groupId:artifactId)' must be unique but found duplicate declaration of plugin org.apache.maven.plugins:maven-war-plugin @ line 119, column 15
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] project                                                            [pom]
+[INFO] CustomerOrderServices                                              [ejb]
+[INFO] Customer Order Services Web Module                                 [war]
+[INFO] Customer Order Services Test Module                                [war]
+[INFO] CustomerOrderServicesApp                                           [ear]
+[INFO] 
+[INFO] ----------------------< org.pwte.example:project >----------------------
+[INFO] Building project 0.1.0-SNAPSHOT                                    [1/5]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] ---------------< org.pwte.example:CustomerOrderServices >---------------
+[INFO] Building CustomerOrderServices 0.1.0-SNAPSHOT                      [2/5]
+[INFO] --------------------------------[ ejb ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ CustomerOrderServices ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ CustomerOrderServices ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ CustomerOrderServices ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/ibmuser/test/openshift-workshop-was/labs/Openshift/RuntimeModernization/app/CustomerOrderServices/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:testCompile (default-testCompile) @ CustomerOrderServices ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ CustomerOrderServices ---
+[INFO] 
+[INFO] --- maven-ejb-plugin:2.1:ejb (default-ejb) @ CustomerOrderServices ---
+[INFO] Building ejb CustomerOrderServices-0.1.0-SNAPSHOT with ejbVersion 3.0
+[INFO] Building jar: /home/ibmuser/test/openshift-workshop-was/labs/Openshift/RuntimeModernization/app/CustomerOrderServices/target/CustomerOrderServices-0.1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] -------------< org.pwte.example:CustomerOrderServicesWeb >--------------
+[INFO] Building Customer Order Services Web Module 0.1.0-SNAPSHOT         [3/5]
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ CustomerOrderServicesWeb ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/ibmuser/test/openshift-workshop-was/labs/Openshift/RuntimeModernization/app/CustomerOrderServicesWeb/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ CustomerOrderServicesWeb ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ CustomerOrderServicesWeb ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/ibmuser/test/openshift-workshop-was/labs/Openshift/RuntimeModernization/app/CustomerOrderServicesWeb/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:testCompile (default-testCompile) @ CustomerOrderServicesWeb ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ CustomerOrderServicesWeb ---
+[INFO] 
+[INFO] --- maven-war-plugin:3.1.0:war (default-war) @ CustomerOrderServicesWeb ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [CustomerOrderServicesWeb] in [/home/ibmuser/test/openshift-workshop-was/labs/Openshift/RuntimeModernization/app/CustomerOrderServicesWeb/target/CustomerOrderServicesWeb-0.1.0-SNAPSHOT]
+[INFO] Processing war project
+[INFO] Copying webapp webResources [/home/ibmuser/test/openshift-workshop-was/labs/Openshift/RuntimeModernization/app/CustomerOrderServicesWeb/src/main/webapp] to [/home/ibmuser/test/openshift-workshop-was/labs/Openshift/RuntimeModernization/app/CustomerOrderServicesWeb/target/CustomerOrderServicesWeb-0.1.0-SNAPSHOT]
+[INFO] Copying webapp resources [/home/ibmuser/test/openshift-workshop-was/labs/Openshift/RuntimeModernization/app/CustomerOrderServicesWeb/src/main/webapp]
+[INFO] Webapp assembled in [8719 msecs]
+[INFO] Building war: /home/ibmuser/test/openshift-workshop-was/labs/Openshift/RuntimeModernization/app/CustomerOrderServicesWeb/target/CustomerOrderServicesWeb-0.1.0-SNAPSHOT.war
+[INFO] 
+[INFO] -------------< org.pwte.example:CustomerOrderServicesTest >-------------
+[INFO] Building Customer Order Services Test Module 0.1.0-SNAPSHOT        [4/5]
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ CustomerOrderServicesTest ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 15 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ CustomerOrderServicesTest ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ CustomerOrderServicesTest ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/ibmuser/test/openshift-workshop-was/labs/Openshift/RuntimeModernization/app/CustomerOrderServicesTest/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:testCompile (default-testCompile) @ CustomerOrderServicesTest ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ CustomerOrderServicesTest ---
+[INFO] 
+[INFO] --- maven-war-plugin:3.1.0:war (default-war) @ CustomerOrderServicesTest ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [CustomerOrderServicesTest] in [/home/ibmuser/test/openshift-workshop-was/labs/Openshift/RuntimeModernization/app/CustomerOrderServicesTest/target/CustomerOrderServicesTest-0.1.0-SNAPSHOT]
+[INFO] Processing war project
+[INFO] Copying webapp webResources [/home/ibmuser/test/openshift-workshop-was/labs/Openshift/RuntimeModernization/app/CustomerOrderServicesTest/src/main/webapp] to [/home/ibmuser/test/openshift-workshop-was/labs/Openshift/RuntimeModernization/app/CustomerOrderServicesTest/target/CustomerOrderServicesTest-0.1.0-SNAPSHOT]
+[INFO] Copying webapp resources [/home/ibmuser/test/openshift-workshop-was/labs/Openshift/RuntimeModernization/app/CustomerOrderServicesTest/src/main/webapp]
+[INFO] Webapp assembled in [23 msecs]
+[INFO] Building war: /home/ibmuser/test/openshift-workshop-was/labs/Openshift/RuntimeModernization/app/CustomerOrderServicesTest/target/CustomerOrderServicesTest-0.1.0-SNAPSHOT.war
+[INFO] 
+[INFO] -------------< org.pwte.example:CustomerOrderServicesApp >--------------
+[INFO] Building CustomerOrderServicesApp 0.1.0-SNAPSHOT                   [5/5]
+[INFO] --------------------------------[ ear ]---------------------------------
+[INFO] 
+[INFO] --- maven-ear-plugin:2.6:generate-application-xml (default-generate-application-xml) @ CustomerOrderServicesApp ---
+[INFO] Generating application.xml
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ CustomerOrderServicesApp ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-ear-plugin:2.6:ear (default-ear) @ CustomerOrderServicesApp ---
+[INFO] Copying artifact[ejb:org.pwte.example:CustomerOrderServices:0.1.0-SNAPSHOT] to[CustomerOrderServices.jar]
+[INFO] Copying artifact[war:org.pwte.example:CustomerOrderServicesWeb:0.1.0-SNAPSHOT] to[CustomerOrderServicesWeb.war]
+[INFO] Copying artifact[war:org.pwte.example:CustomerOrderServicesTest:0.1.0-SNAPSHOT] to[CustomerOrderServicesTest.war]
+[INFO] Copy ear sources to /home/ibmuser/test/openshift-workshop-was/labs/Openshift/RuntimeModernization/app/CustomerOrderServicesApp/target/CustomerOrderServicesApp-0.1.0-SNAPSHOT
+[INFO] Including custom application.xml[/home/ibmuser/test/openshift-workshop-was/labs/Openshift/RuntimeModernization/app/CustomerOrderServicesApp/src/main/application/META-INF/application.xml]
+[INFO] Including custom manifest file[/home/ibmuser/test/openshift-workshop-was/labs/Openshift/RuntimeModernization/app/CustomerOrderServicesApp/target/CustomerOrderServicesApp-0.1.0-SNAPSHOT/META-INF/MANIFEST.MF]
+[INFO] Building jar: /home/ibmuser/test/openshift-workshop-was/labs/Openshift/RuntimeModernization/app/CustomerOrderServicesApp/target/CustomerOrderServicesApp-0.1.0-SNAPSHOT.ear
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for project 0.1.0-SNAPSHOT:
+[INFO] 
+[INFO] project ............................................ SUCCESS [  0.002 s]
+[INFO] CustomerOrderServices .............................. SUCCESS [  0.767 s]
+[INFO] Customer Order Services Web Module ................. SUCCESS [ 13.796 s]
+[INFO] Customer Order Services Test Module ................ SUCCESS [  0.107 s]
+[INFO] CustomerOrderServicesApp ........................... SUCCESS [  2.009 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  16.782 s
+[INFO] Finished at: 2021-09-29T16:30:09-04:00
+[INFO] ------------------------------------------------------------------------

@@ -1,0 +1,79 @@
+commands:
+- exec:
+    commandLine: echo in build
+    component: dev
+    group:
+      isDefault: true
+      kind: build
+    hotReloadCapable: true
+    workingDir: /projects
+  id: build
+- exec:
+    commandLine: mvn -Dliberty.runtime.version=21.0.0.9 -Ddebug=false -DhotTests=true
+      -DcompileWait=3 io.openliberty.tools:liberty-maven-plugin:3.4.1-SNAPSHOT:dev
+    component: dev
+    group:
+      isDefault: true
+      kind: run
+    hotReloadCapable: true
+    workingDir: /projects
+  id: run
+- exec:
+    commandLine: mvn -Dliberty.runtime.version=21.0.0.9 -Ddebug=false io.openliberty.tools:liberty-maven-plugin:3.4.1-SNAPSHOT:dev
+    component: dev
+    group:
+      kind: run
+    hotReloadCapable: true
+    workingDir: /projects
+  id: run-test-off
+- exec:
+    commandLine: mvn -Dliberty.runtime.version=21.0.0.9 -DdebugPort=${DEBUG_PORT}
+      io.openliberty.tools:liberty-maven-plugin:3.4.1-SNAPSHOT:dev -Dliberty.env.WLP_DEBUG_REMOTE=y
+    component: dev
+    group:
+      isDefault: true
+      kind: debug
+    hotReloadCapable: true
+    workingDir: /projects
+  id: debug
+- exec:
+    commandLine: mvn failsafe:integration-test failsafe:verify
+    component: dev
+    group:
+      isDefault: true
+      kind: test
+    hotReloadCapable: true
+    workingDir: /projects
+  id: test
+components:
+- container:
+    endpoints:
+    - exposure: public
+      name: ep1
+      path: /
+      protocol: http
+      targetPort: 9080
+    env:
+    - name: FO99
+      value: bar
+    image: scottkurz/application-stack:0.7.0-1250-patch
+    memoryLimit: 1512Mi
+    mountSources: true
+  name: dev
+metadata:
+  description: Java application stack using Open Liberty runtime
+  displayName: Open Liberty Maven
+  icon: https://raw.githubusercontent.com/OpenLiberty/logos/7fbb132949b9b2589e18c8d5665c1b107028a21d/logomark/svg/OL_logomark.svg
+  language: java
+  name: java-openliberty
+  projectType: openliberty
+  tags:
+  - Java
+  - Maven
+  version: 0.6.0
+schemaVersion: 2.0.0
+starterProjects:
+- git:
+    remotes:
+      origin: https://github.com/OpenLiberty/application-stack-starters.git
+  name: user-app
