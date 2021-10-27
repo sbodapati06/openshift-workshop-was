@@ -1,3 +1,4 @@
+#
 oc delete -f pipeline-deploy-run.yaml
 oc delete -f pipeline-deploy.yaml
 oc delete -f buildah.yaml
