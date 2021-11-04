@@ -15,7 +15,7 @@
 		<connectionManager agedTimeout="-1" connectionTimeout="180" maxIdleTime="1800" maxPoolSize="10" minPoolSize="1" reapTime="180"/>
 	</dataSource>	
 	
-	<variable name="DB_HOST" defaultValue="localhost"/>
+	<variable name="DB_HOST" defaultValue="orderdb"/>
 	<variable name="DB_PORT" defaultValue="50000"/>
 	<variable name="DB_USER" defaultValue="db2inst1"/>
 	<variable name="DB_PASSWORD" defaultValue="db2inst1"/>

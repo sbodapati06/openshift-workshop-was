@@ -17,11 +17,10 @@ cd /home/ibmuser/openshift-workshop-was/db2-docker/orderdb
 docker build . -t cos-orderdb
 ```
 
-#Create the docker container. The command creates the ORDERDB database, sets the db2inst1 password, and the scripts that were copied to the /var/customm folder on the image automatically run (when using the IBM DB2 11 Docker image. The scripts create the tables and populate the DB. It also stores the DATA on the local VM in the locateion specified by the -v option. And it maps to the /database directory in the docker container. 
+#Create the docker container. The command creates the ORDERDB database, sets the db2inst1 password, and the scripts that were copied to the /var/customm folder on the image automatically run (when using the IBM DB2 11 Docker image. The scripts create the tables and populate the DB. It also stores the DATA on the local VM in the locateion specified by the -v option. And it maps to the /database directory in the docker container. Add network for cos app. Add hostname so cos app can access db
 ```
-docker run -itd --name cos-orderdb --privileged -p 50000:50000 -e DBNAME=ORDERDB -e LICENSE=accept -e DB2INST1_PASSWORD=db2inst1 -v /home/ibmuser/orderdb/database:/database  cos-orderdb:latest
+docker run -itd --name cos-orderdb --privileged --network=cosNetwork --hostname=orderdb -p 50000:50000 -e DBNAME=ORDERDB -e LICENSE=accept -e DB2INST1_PASSWORD=db2inst1 -v /home/ibmuser/orderdb/database:/database  cos-orderdb:latest
 ```
-
 
 # Repeat checking of the db2 logs to ensure DB is setup and running. 
 ### Note: The .sql file sand the .sh files get executed. The .swl files will show errors, but the PopulateDB.sh script should run, and successfull create the table and populate the DB, using the same .sql files. 
