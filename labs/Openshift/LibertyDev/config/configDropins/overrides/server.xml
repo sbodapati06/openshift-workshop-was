@@ -15,7 +15,7 @@
 
 	<httpAccessLogging id="accessLogging"/>
 
-	<applicationMonitor updateTrigger="mbean"/>
+	<!-- <applicationMonitor updateTrigger="mbean"/> -->
 	<application id="customerOrderServicesApp" location="CustomerOrderServicesApp.ear" name="CustomerOrderServicesApp.ear" type="ear">
 		<classloader apiTypeVisibility="spec, ibm-api, third-party,stable"/>
 		<application-bnd>
