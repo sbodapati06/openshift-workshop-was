@@ -2,8 +2,9 @@ echo "copy the updated ReadinessCheck.java health check to the cos web applicati
 
 # The preceeding slash means do not prompt for overwriting the file.
 
-\cp ~/openshift-workshop-was/labs/Openshift/LibertyDev/lab-files/ReadinessCheck.java ~/openshift-workshop-was/labs/Openshift/LibertyDev/app/CustomerOrderServicesWeb/src/org/pwte/example/health/ReadinessCheck.java
+# \cp ~/openshift-workshop-was/labs/Openshift/LibertyDev/lab-files/ReadinessCheck.java ~/openshift-workshop-was/labs/Openshift/LibertyDev/app/CustomerOrderServicesWeb/src/org/pwte/example/health/ReadinessCheck.java
 
+\cp ~/openshift-workshop-was/labs/Openshift/LibertyDev/lab-files/ReadinessCheck.java ~/openshift-workshop-was/labs/Openshift/LibertyDev/app/CustomerOrderServicesWeb/src/main/java/org/pwte/example/health/ReadinessCheck.java
 echo "ReadinessCheck Update complete"
 
 echo "Script completed"
