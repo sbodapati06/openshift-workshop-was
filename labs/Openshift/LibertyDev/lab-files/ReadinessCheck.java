@@ -28,6 +28,14 @@ import javax.sql.DataSource;
 public class ReadinessCheck implements HealthCheck {
 	
 	
+/*
+Microprofile healthcheck returns the following HTTPS Codes:
+
+200 - if healthcheck status is UP
+503 - if healthcheck status is DOWN 
+
+*/
+
 	
 	@Override
 	public HealthCheckResponse call() {

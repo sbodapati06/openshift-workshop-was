@@ -12,6 +12,14 @@ import java.net.URL;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
+/*
+Microprofile healthcheck returns the following HTTPS Codes:
+
+200 - if healthcheck status is UP
+503 - if healthcheck status is DOWN 
+
+*/
+
 @ApplicationScoped
 @Readiness
 public class ReadinessCheck implements HealthCheck {
