@@ -1,7 +1,7 @@
 ## Build stage
 FROM maven:latest AS builder
 COPY app/ /
-# RUN mvn clean package -DskipTests
+RUN mvn clean package -DskipTests
 
 ## Application image
 FROM openliberty/open-liberty:full-java8-openj9-ubi

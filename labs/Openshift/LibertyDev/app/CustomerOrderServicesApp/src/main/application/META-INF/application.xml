@@ -5,12 +5,6 @@
 	<module id="Module_1493296624076">
 		<ejb>CustomerOrderServices.jar</ejb>
 	</module>
-	<module id="Module_1493296623622">
-		<web>
-			<web-uri>CustomerOrderServicesTest.war</web-uri>
-			<context-root>CustomerOrderServicesTest</context-root>
-		</web>
-	</module>
 	<module id="Module_1493296624098">
 		<web>
 			<web-uri>CustomerOrderServicesWeb.war</web-uri>
