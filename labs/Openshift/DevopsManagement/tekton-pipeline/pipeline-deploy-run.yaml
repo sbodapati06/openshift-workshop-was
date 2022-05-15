@@ -11,7 +11,7 @@ spec:
     - name: target-namespace
       value: dev
     - name: repo-url
-      value: https://github.com/IBMTechSales/openshift-workshop-was
+      value: https://github.com/sbodapati06/openshift-workshop-was
   pipelineRef:
     name: tutorial-pipeline
   workspaces:
